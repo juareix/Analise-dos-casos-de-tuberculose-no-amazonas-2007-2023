@@ -1,0 +1,59 @@
+sexo,resultado,n,percentual
+Feminino,Ausência de B.A.A.R. na amostra examinada.,9439,5.4
+Feminino,Contaminada,2446,1.4
+Feminino,Encontrado 1 B.A.A.R. em 100 campos examinados.,14,0
+Feminino,Encontrados 2 B.A.A.R. em 100 campos examinados.,31,0
+Feminino,Encontrados 3 B.A.A.R. em 100 campos examinados.,20,0
+Feminino,Encontrados 4 B.A.A.R. em 100 campos examinados.,27,0
+Feminino,Encontrados 5 B.A.A.R. em 100 campos examinados.,14,0
+Feminino,Encontrados 6 B.A.A.R. em 100 campos examinados.,19,0
+Feminino,Encontrados 7 B.A.A.R. em 100 campos examinados.,14,0
+Feminino,Encontrados 8 B.A.A.R. em 100 campos examinados.,11,0
+Feminino,Encontrados 9 B.A.A.R. em 100 campos examinados.,5,0
+Feminino,Micobactéria não causadora de Tuberculose,15,0
+Feminino,Micobactéria não causadora de Tuberculose (++),1,0
+Feminino,Micobactéria não causadora de Tuberculose (1 a 20 UFC),20,0
+Feminino,Micobactéria não causadora de Tuberculose(+),8,0
+Feminino,Negativa,42129,24.3
+Feminino,Positiva,456,0.3
+Feminino,Positiva (+),1148,0.7
+Feminino,Positiva (++),977,0.6
+Feminino,Positiva (+++),748,0.4
+Feminino,Positiva (1 a 20 UFC),700,0.4
+Feminino,Positiva para B.A.A.R.,36,0
+Feminino,Positiva para B.A.A.R. +,298,0.2
+Feminino,Positiva para B.A.A.R. ++,134,0.1
+Feminino,Positiva para B.A.A.R. +++,67,0
+Feminino,NA,114535,66.1
+Masculino,Ausência de B.A.A.R. na amostra examinada.,13225,6.3
+Masculino,Contaminada,3366,1.6
+Masculino,Encontrado 1 B.A.A.R. em 100 campos examinados.,31,0
+Masculino,Encontrados 2 B.A.A.R. em 100 campos examinados.,57,0
+Masculino,Encontrados 3 B.A.A.R. em 100 campos examinados.,38,0
+Masculino,Encontrados 4 B.A.A.R. em 100 campos examinados.,49,0
+Masculino,Encontrados 5 B.A.A.R. em 100 campos examinados.,39,0
+Masculino,Encontrados 6 B.A.A.R. em 100 campos examinados.,33,0
+Masculino,Encontrados 7 B.A.A.R. em 100 campos examinados.,24,0
+Masculino,Encontrados 8 B.A.A.R. em 100 campos examinados.,24,0
+Masculino,Encontrados 9 B.A.A.R. em 100 campos examinados.,7,0
+Masculino,Micobactéria não causadora de Tuberculose,33,0
+Masculino,Micobactéria não causadora de Tuberculose (++),3,0
+Masculino,Micobactéria não causadora de Tuberculose (+++),5,0
+Masculino,Micobactéria não causadora de Tuberculose (1 a 20 UFC),30,0
+Masculino,Micobactéria não causadora de Tuberculose(+),10,0
+Masculino,Negativa,51037,24.2
+Masculino,Positiva,974,0.5
+Masculino,Positiva (+),1972,0.9
+Masculino,Positiva (++),1934,0.9
+Masculino,Positiva (+++),1578,0.7
+Masculino,Positiva (1 a 20 UFC),1203,0.6
+Masculino,Positiva para B.A.A.R.,113,0.1
+Masculino,Positiva para B.A.A.R. +,746,0.4
+Masculino,Positiva para B.A.A.R. ++,274,0.1
+Masculino,Positiva para B.A.A.R. +++,195,0.1
+Masculino,NA,134323,63.6
+NA,Contaminada,2,2.4
+NA,Negativa,24,29.3
+NA,Positiva (++),1,1.2
+NA,Positiva (+++),1,1.2
+NA,NA,54,65.9
