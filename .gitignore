@@ -1,0 +1,15 @@
+data/data_raw
+data/data_processed
+.Rproj.user
+.Rhistory
+.RData
+v2.0 - Analise de tuberculose no Amazonas.Rproj
+
+#renv
+renv/library/
+renv/staging/
+renv/local/
+renv/cellar/
+renv/lock/
+renv/python/
+renv/sandbox/
