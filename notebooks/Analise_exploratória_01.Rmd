@@ -1,0 +1,52 @@
+---
+title: "Analise exploratória Inicial da Base de dados do GAL"
+author: "Juarez Maciel da Silva"
+output: html_notebook
+---
+
+```{r}
+# Carregar pacotes
+library(tidyverse)
+library(lubridate) # manipulação de datas
+library(tibble)
+library(skimr)
+
+```
+
+Carregando a base de dados: 
+
+```{r}
+df_original <- read_csv("../data/data_raw/BD_GAL.csv")
+```
+1º Avaliar de forma macro o conjunto de dados:
+
+```{r}
+glimpse(df_original)
+```
+
+2º Verificando se existe valores nulos nos dados:
+```{r}
+# Valores ausentes por variável
+#df <- as.data.frame (dados %>% summarise_all(~sum(is.na(.))))
+
+t(df_original %>% summarise_all(~sum(is.na(.))))
+
+```
+3º Verificar os valores únicos nas variaveis:
+
+```{r}
+valores_unicos_exibidos <- function(df) {
+  df %>%
+    summarise(across(everything(), ~ paste(unique(.), collapse = ", "))) %>%
+    pivot_longer(cols = everything(), names_to = "variavel", values_to = "valores_unicos")
+}
+
+df_valores_unicos <- as_data_frame(valores_unicos_exibidos(df_original))
+```
+
+4º Verificar medidas estatisticas principais do conjunto de dados:
+
+```{r}
+skim(df_original)
+```
+
