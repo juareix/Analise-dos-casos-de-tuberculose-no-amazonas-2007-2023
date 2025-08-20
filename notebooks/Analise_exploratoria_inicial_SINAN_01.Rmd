@@ -50,12 +50,12 @@ df_valores_unicos<- df_sinan %>%
     pivot_longer(cols = everything(), names_to = "variavel", values_to = "valores_unicos")
 ```
 
-
 ### 4º Visualizar as medidas estatisticas principais do conjunto de dados
-<p> Média | Mediana | Desvio Padrão | Quartis | Valores mínimos e máximos
 
+<p>
+
+Média \| Mediana \| Desvio Padrão \| Quartis \| Valores mínimos e máximos
 
 ```{r}
 skim(df_sinan)
 ```
-
