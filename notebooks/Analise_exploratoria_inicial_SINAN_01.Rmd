@@ -1,0 +1,61 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+# Análise exploratória inicial ds base de dados do SINAN - 2007 a 2023
+
+#### Importação das bibliotecas e pacotes necessários:
+
+```{r}
+library(tidyverse)
+library(lubridate) # manipulação de datas
+library(tibble)
+library(skimr)
+library(janitor)
+library(foreign)
+```
+
+#### Importação da base de dados:
+
+```{r}
+df_sinan <- read.dbf("../data/data_raw/BD_SINAN.dbf", as.is = TRUE)
+```
+
+### 1º Avaliar o conjunto de dados de forma macro para compreender os dados
+
+```{r}
+#Verificando as primeira linhas do DataFrame
+head(df_sinan)
+```
+
+```{r}
+#Exibe um um panorama resumido da base de dados:
+
+glimpse(df_sinan)
+```
+
+### 2º Verificar se existe valores nulos(em branco) nos dados
+
+```{r}
+#faz uma verificção básica sobre valores nulos:
+t(df_sinan %>% summarise_all(~sum(is.na(.))))
+```
+
+### 3º Verificar os valores únicos em cada variavel
+
+```{r}
+df_valores_unicos<- df_sinan %>%
+    summarise(across(everything(), ~ paste(unique(.), collapse = ", "))) %>%
+    pivot_longer(cols = everything(), names_to = "variavel", values_to = "valores_unicos")
+```
+
+
+### 4º Visualizar as medidas estatisticas principais do conjunto de dados
+<p> Média | Mediana | Desvio Padrão | Quartis | Valores mínimos e máximos
+
+
+```{r}
+skim(df_sinan)
+```
+
