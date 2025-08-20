@@ -57,7 +57,7 @@ skim(df_original)
 #Seleciona algumas variaveis para analisar inicialmente:
 
 df_selecionadas <- df_original %>%
-  select(sexo, agravo_sinan, raca_cor, data_de_nascimento, idade)
+  select(sexo, agravo_sinan, raca_cor, data_de_nascimento, idade, data_notificacao_sinan)
 ```
 
 Analise da variavel sexo:
@@ -103,4 +103,9 @@ df_selecionadas %>%
   adorn_pct_formatting(digits = 1)               # formata bonito
 ```
 
+Teste:
+
+```{r}
+colnames(df_original)
+```
 
