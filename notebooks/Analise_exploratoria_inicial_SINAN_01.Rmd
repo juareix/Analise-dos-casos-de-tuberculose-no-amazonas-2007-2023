@@ -14,6 +14,7 @@ library(tibble)
 library(skimr)
 library(janitor)
 library(foreign)
+library(plotly)
 ```
 
 #### Importação da base de dados:
@@ -59,3 +60,65 @@ Média \| Mediana \| Desvio Padrão \| Quartis \| Valores mínimos e máximos
 ```{r}
 skim(df_sinan)
 ```
+
+### 5º Avaliar as variaveis de forma individual através de gráficos para melhor entender os dados
+
+```{r}
+
+df_selecionadas <- df_sinan %>%
+  select(DT_NOTIFIC, DT_DIAG, DT_NASC, CS_SEXO, CS_RACA, CS_ESCOL_N, FORMA)
+
+```
+
+#### Analise da variavel sexo:
+
+```{r}
+ggplot(df_selecionadas, aes(x = CS_SEXO)) +
+  geom_bar(fill = "steelblue") +
+  geom_text(stat = "count", aes(label = ..count..), vjust = -0.3) +
+  labs(x = "Sexo", y = "Frequência", title = "Distribuição por sexo") +
+  theme_minimal()
+
+
+```
+
+#### Analise da variavel DATA:
+
+```{r}
+# Agregar por ano
+df_plot <- df_selecionadas %>%
+  mutate(ano = year(DT_NOTIFIC)) %>%
+  count(ano)
+
+# Gráfico com ggplot
+p <- ggplot(df_plot, aes(x = ano, y = n)) +
+  geom_line(color = "steelblue", linewidth = 1) +
+  geom_point(color = "darkred", size = 2) +
+  labs(x = "Ano de notificação", y = "Número de casos",
+       title = "Tendência de notificações por ano") +
+  scale_x_continuous(breaks = unique(df_plot$ano)) + # todos os anos no eixo
+  theme_minimal()
+
+# Tornar interativo
+ggplotly(p)
+
+```
+
+```{r}
+df_plot <- df_selecionadas %>%
+  mutate(ano = year(DT_NOTIFIC)) %>%
+  count(ano, CS_SEXO)
+
+p <- ggplot(df_plot, aes(x = ano, y = n, color = CS_SEXO)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 2) +
+  labs(x = "Ano", y = "Número de casos",
+       title = "Notificações por sexo e ano") +
+  scale_x_continuous(breaks = unique(df_plot$ano)) +
+  theme_minimal()
+
+ggplotly(p)
+
+```
+
+
